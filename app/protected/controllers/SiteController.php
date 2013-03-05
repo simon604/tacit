@@ -2,6 +2,10 @@
 
 class SiteController extends Controller
 {
+	public function init()
+	{
+		$this->layout = "//layouts/no-nav";
+	}
 	/**
 	 * Declares class-based actions.
 	 */
@@ -27,9 +31,14 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		if(Yii::app()->user->isGuest)
+		{
+			$this->render('index');	
+		} 
+		else
+		{
+			$this->redirect('?r=profile/index');
+		}
 	}
 
 	/**
@@ -95,6 +104,7 @@ class SiteController extends Controller
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
+		$this->layout = "//layouts/simple";
 		$this->render('login',array('model'=>$model));
 	}
 

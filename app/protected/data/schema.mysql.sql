@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS `tbl_user`;
 CREATE TABLE tbl_user (
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(128) NOT NULL,
@@ -26,3 +27,18 @@ INSERT INTO tbl_user (username, password, email) VALUES ('test18', 'pass18', 'te
 INSERT INTO tbl_user (username, password, email) VALUES ('test19', 'pass19', 'test19@example.com');
 INSERT INTO tbl_user (username, password, email) VALUES ('test20', 'pass20', 'test20@example.com');
 INSERT INTO tbl_user (username, password, email) VALUES ('test21', 'pass21', 'test21@example.com');
+
+DROP TABLE IF EXISTS `tbl_profile`;
+CREATE TABLE `tbl_profile` (
+  `user_id` int(11) NOT NULL,
+  `lastname` varchar(50) NOT NULL DEFAULT '',
+  `firstname` varchar(50) NOT NULL DEFAULT '',
+  `location` varchar(50) NOT NULL DEFAULT '',
+  `role` int(5) NOT NULL DEFAULT 0,
+  `share_expertise` varchar(256) NOT NULL DEFAULT '',
+  `share_expertise_description` varchar(512) NOT NULL DEFAULT '',
+  `learn_expertise` varchar(512) NOT NULL DEFAULT '',
+  `learn_expertise_description` varchar(512) NOT NULL DEFAULT '',
+  `image_path` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
