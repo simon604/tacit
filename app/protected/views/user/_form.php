@@ -12,25 +12,36 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>128)); ?>
-		<!-- <?php echo $form->error($model,'username'); ?> -->
+		<!-- <div class="small-3 columns"> -->
+			<!-- <?php echo $form->label($model,'username', array('class' => 'right inline')); ?> -->
+	    <!-- </div> -->
+	    <div class="small-12 columns">
+	    	<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>128, 'placeholder' => 'Username')); ?>
+	    </div>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<!-- <div class="small-3 columns"> -->
+			<!-- <?php echo $form->label($model,'email', array('class' => 'right inline')); ?> -->
+	    <!-- </div> -->
+	    <div class="small-12 columns">
+	    	<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128, 'placeholder' => 'Email')); ?>
+	    </div>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
-		<!-- <?php echo $form->error($model,'email'); ?> -->
+		<!-- <div class="small-3 columns"> -->
+			<!-- <?php echo $form->label($model,'password', array('class' => 'right inline')); ?> -->
+	    <!-- </div> -->
+	    <div class="small-12 columns">
+	    	<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>128, 'placeholder' => 'Password')); ?>
+	    </div>
 	</div>
 
+	
+	<br>
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'CREATE ACCOUNT!' : 'Save', array('class' => 'button expand')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'CREATE ACCOUNT!' : 'Save', array('class' => 'dark-orange large button expand')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

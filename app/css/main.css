@@ -7,10 +7,114 @@ body
 	background: #EFEFEF;
 }
 
+body#user {
+	background-color: yellow;
+}
+
+body#profile {
+	background-color: yellow;
+}
+
+body#profile.view {
+	background-color: white;
+}
+
 #profile-form #Profile_role label {
 	display: inline;
 }
 
 #profile-list img {
 	display: inline-block;
+}
+
+.top-bar {
+	height: 80px;
+	padding: 25px 20px 0 20px;
+	border:none;
+	box-shadow: 0px 0px 7px #BBB;
+	-moz-box-shadow: 0px 0px 7px #BBB;
+	-webkit-box-shadow: 0px 0px 7px #BBB;
+}
+
+#home-hero-header, #home-hero-header h1 {
+	color: #FFFFFF;
+}
+
+.button { 
+	border: none;
+	border-radius: 30px;
+}
+
+.button.orange {
+	background-color: #f7c41d;
+}
+
+.button.dark-orange {
+	background-color: #eb6120;
+}
+
+.button.teal {
+	background-color: #9ad7d0;
+}
+
+.button:hover, .button:focus {
+	background-color: green;
+}
+
+.top-bar-section ul {
+	background: transparent;
+}
+
+label {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+input[type='text'], input[type='password'] {
+	border-radius: 10px;
+	height: 3.2em;
+}
+
+#profile-form #Profile_role label {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+form input {
+	font-size: 16px !important; 
+}
+
+#profile-form label {
+	font-size: 20px;
+}
+
+#profile-form textarea {
+	height: 100px;
+}
+
+#profile-form .custom.dropdown{
+	height: 2.8em;
+	font-size: 18px;
+}
+
+.profile-label {
+	margin-bottom: 0px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.profile-label span {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+#profile-list .profile-label {
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#profile-list .profile-label span {
+	font-weight: normal;
+	font-size: 14px;
 }

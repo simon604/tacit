@@ -71,7 +71,7 @@ class UserController extends Controller
 		{
 			$model->attributes=$_POST['User'];
 			$plainPassword = $model->password; // use it to login later
-			$model->password = crypt($model->password,self::blowfishSalt());
+			$model->password = md5($model->password);
 
 			if($model->save()) 
 			{
@@ -86,7 +86,6 @@ class UserController extends Controller
 			}
 		}
 
-		$this->layout = "//layouts/no-nav";
 		$this->render('create',array(
 			'model'=>$model,
 		));

@@ -11,16 +11,16 @@
     <meta name="viewport" content="width=device-width">
 	
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/normalize.css" />
-	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/foundation.css" />
+	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/custom.modernizr.js"></script>
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
-<body>
-	<div class="container row">
+<body id="<?php echo $this->getUniqueId(); ?>" class="<?php echo $this->action->id; ?>">
+	<div class="container">
 		<div id="header">
 			<nav class="top-bar">
 				<!-- Title Area -->
@@ -35,12 +35,16 @@
 
 				<section class="top-bar-section">
 					<ul class="left">
-						<li><a href="?r=profile">FIND PEOPLE</a></li>
+						<li><a href="?r=profile">FIND MENTORS</a></li>
 					</ul>
 
 					<ul class="right">
+						<?php if(Yii::app()->user->isGuest) { ?>
+						<li><a href="?r=site/login" class="teal button">LOGIN</a>
+						<?php } else { ?>
 						<li><a href="?r=profile/view&id=<?php echo Yii::app()->user->id; ?>">MY PROFILE</a>
-						<li><a href="?r=site/logout">LOGOUT</a>	
+						<li><a href="?r=site/logout">LOGOUT</a>
+						<?php } ?>	
 					</li>
 				</section>
 			</nav>

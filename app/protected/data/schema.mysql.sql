@@ -35,6 +35,8 @@ CREATE TABLE `tbl_profile` (
   `firstname` varchar(50) NOT NULL DEFAULT '',
   `location` varchar(50) NOT NULL DEFAULT '',
   `role` int(5) NOT NULL DEFAULT 0,
+  `experience` int(5) DEFAULT NULL,
+  `level` varchar(50) NOT NULL DEFAULT '',
   `share_expertise` varchar(256) NOT NULL DEFAULT '',
   `share_expertise_description` varchar(512) NOT NULL DEFAULT '',
   `learn_expertise` varchar(512) NOT NULL DEFAULT '',

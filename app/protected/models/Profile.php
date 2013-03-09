@@ -21,12 +21,9 @@ class Profile extends CActiveRecord
 	const ROLE_YOUNG=0;
 	const ROLE_OLD=1;
 
-	const LOCATION_VANCOUVER = 0;
-	const LOCATION_BURNABY = 1;
-	const LOCATION_SURREY = 2;
-	const LOCATION_RICHMOND = 3;
-	const LOCATION_COQUITLAM = 4;
-	const LOCATION_NORTH_VANCOUVER = 5;
+	const LEVEL_1 = 0;
+	const LEVEL_2 = 1;
+	const LEVEL_3 = 2;
 
 	/**
 	 * Returns the static model of the specified AR class.
@@ -54,7 +51,7 @@ class Profile extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, firstname, lastname, location, role', 'required'),
+			array('user_id, firstname, lastname, location, role, share_expertise, experience, level', 'required'),
 			array('user_id, role', 'numerical', 'integerOnly'=>true),
 			array('lastname, firstname, location', 'length', 'max'=>50),
 			array('share_expertise, image_path', 'length', 'max'=>256),
@@ -89,10 +86,10 @@ class Profile extends CActiveRecord
 			'location' => 'Location',
 			'role' => 'Role',
 			'share_expertise' => 'What expertise would you like to share?',
-			'share_expertise_description' => 'Tell us your story about your talent!',
-			'learn_expertise' => 'What expertise would you like to learn?',
-			'learn_expertise_description' => 'What are some passions you want to learn more about?',
-			'image_path' => 'Your Profile Image',
+			'share_expertise_description' => 'What made you so passionate about your craft?',
+			'learn_expertise' => 'What other creative skills do you want to learn?',
+			'learn_expertise_description' => 'What would you like to learn from a mentor?',
+			'image_path' => 'Add Profile Image (optional)',
 		);
 	}
 
@@ -126,31 +123,28 @@ class Profile extends CActiveRecord
 	public function getRoleOptions()
    	{
 	    return array(
-			self::ROLE_YOUNG=>'I AM YOUNG',
-			self::ROLE_OLD=>'I AM OLD'
+			self::ROLE_YOUNG=>'I\'m young, ambitious and have a lot to share, lots to learn.',
+			self::ROLE_OLD=>'I\'m young at heart and still have a ton to learn.'
 		); 
  	}
 
- 	public function getLocationOptions()
+ 	public function getLevelOptions()
    	{
 	    return array(
-			self::LOCATION_VANCOUVER=>'Vancouver',
-			self::LOCATION_BURNABY=>'Burnaby',
-			self::LOCATION_SURREY=>'Surrey',
-			self::LOCATION_RICHMOND=>'Richmond',
-			self::LOCATION_NORTH_VANCOUVER=>'North Vancouver',
-			self::LOCATION_COQUITLAM=>'Coquitlam'
+			self::LEVEL_1=>'I\'m pretty good',
+			self::LEVEL_2=>'I\'m Pro!',
+			self::LEVEL_3=>'I\'m like a Jedi master.'
 		); 
  	}
 
  	/**
       * @return string the status text display for the current issue
       */
-     public function getLocationText()
+     public function getLevelText()
      {
-		$locationOptions=$this->getLocationOptions();
+		$levelOptions=$this->getLevelOptions();
 		
-		return isset($locationOptions[$this->location]) ?
-			$locationOptions[$this->location] : "unknown status ({$this->location})";
+		return isset($levelOptions[$this->level]) ?
+			$levelOptions[$this->level] : "unknown status ({$this->level})";
 	}
 }

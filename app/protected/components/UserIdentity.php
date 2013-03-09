@@ -22,7 +22,7 @@ class UserIdentity extends CUserIdentity
 		$record = User::model()->findByAttributes(array('email' => $this->username));
 		if ($record === null) {
 		    $this->errorCode = self::ERROR_USERNAME_INVALID;
-		} else if ($record->password !== crypt($this->password, $record->password)) {
+		} else if ($record->password !== md5($this->password)) {
 		    $this->errorCode = self::ERROR_PASSWORD_INVALID;
 		} else {
 		    $this->_id = $record->id;

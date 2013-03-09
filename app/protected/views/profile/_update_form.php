@@ -17,20 +17,12 @@
 
 	<div class="row">
 		<div class="large-12 columns">
-			<?php echo $form->labelEx($model,'share_expertise'); ?>
-			<?php echo $form->textField($model,'share_expertise',array('size'=>60,'maxlength'=>256)); ?>
-			<?php echo $form->error($model,'share_expertise'); ?>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-12 columns">
 			<?php echo $form->labelEx($model,'share_expertise_description'); ?>
 			<?php echo $form->textArea($model,'share_expertise_description',array('size'=>60,'maxlength'=>512)); ?>
 			<?php echo $form->error($model,'share_expertise_description'); ?>
 		</div>
 	</div>
-
+	<br>
 	<div class="row">
 		<div class="large-12 columns">
 			<?php echo $form->labelEx($model,'learn_expertise'); ?>
@@ -46,10 +38,10 @@
 			<?php echo $form->error($model,'learn_expertise_description'); ?>
 		</div>
 	</div>
-
+<br>
 	<div class="row buttons">
 		<div class="large-12 columns">
-			<?php echo CHtml::submitButton('CONTINUE', array('class' => 'button')); ?>
+			<?php echo CHtml::submitButton('CONTINUE', array('class' => 'dark-orange large button')); ?>
 		</div>
 	</div>
 

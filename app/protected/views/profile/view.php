@@ -1,22 +1,58 @@
 <div class="row" style="margin-top:40px;">
 	<div class="large-10 large-centered columns">
 		<div class="small-4 columns">
-			<img width="200" src="<?php echo Yii::app()->request->baseUrl . '/images/' . $model->image_path; ?>">
+			<img style="border: 1px solid #EEE;" width="200" src="<?php echo Yii::app()->request->baseUrl . '/images/' . $model->image_path; ?>">
+			<div style="position: absolute; left: 50%; margin-top: 5px;">
+		        <div style="position: relative; left: -50%; font-size:16px;">
+		            <?php echo $model->firstname; ?>
+		        </div>
+		    </div>
 		</div>
-		<div class="small-4 columns">
-			<div class="row">
-				<?php echo $model->firstname; ?> &nbsp;|&nbsp; <?php echo $model->getLocationText(); ?>
+		<div class="small-6 columns" style="margin-left: 20px;">
+			<div class="row" style="border-bottom: 1px solid #999;">
+				<h1 style="margin-bottom: 5px; margin-top: 0;"><?php echo strtoupper($model->share_expertise); ?></h1>
+			</div>
+			<div class="row" style="margin-top:10px;">
+				<p class="profile-label">
+					 <span class="profile-view-label">Neighborhood:</span> <?php echo $model->location; ?>
+				</p>
 			</div>
 			<div class="row">
-				<h3><?php echo $model->share_expertise; ?></h3>
+				<p class="profile-label">
+					<span class="profile-view-label">Skill Level:</span> <?php echo $model->getLevelText(); ?>
+				</p>
 			</div>
 			<div class="row">
-				<span style="font-size:0.90em; color: #666;">Interested in developing my skills in:</span>
-				<p><?php echo $model->learn_expertise; ?></p>
+				<p class="profile-label">
+					<span class="profile-view-label">Experience:</span> <?php echo $model->experience; ?>
+				</p>
+			</div>
+
+			<div class="row" style="margin-top:10px;">
+				<span style="font-size:1.2em; color: #666;">Need mentoring in:</span>
+				<p class="profile-label"><?php echo $model->learn_expertise; ?></p>
+			</div>
+			<br>
+			<div class="row">
+				<a href="#" data-reveal-id="myModal" class="dark-orange button left">CONTACT</a>
 			</div>
 		</div>
-		<div class="small-4 columns">
-			<a href="#" data-reveal-id="myModal" class="button right">CONTACT ME</a>
+		<div class="small-2 columns"></div>
+	</div>
+</div>
+
+<div class="row" style="margin-top: 25px;">
+	<div class="large-10 large-centered columns">
+		<div class="row">
+			<div class="large-12 columns" style="border-bottom: 1px solid #999;">
+				<h3 style="margin-bottom: 5px;">MY STORY</h3>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="large-12 columns">
+				<p><?php echo $model->share_expertise_description; ?></p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -24,17 +60,22 @@
 <div class="row" style="margin-top: 25px;">
 	<div class="large-10 large-centered columns">
 		<div class="row">
-			<div class="small-6 columns">
-				<div class="panel">
-					<p><?php echo $model->share_expertise_description; ?></p>
-				</div>
-			</div>
-			<div class="small-6 columns">
-				<div class="panel"> 
-					<p><?php echo $model->learn_expertise_description; ?></p>
-				</div>
+			<div class="large-12 columns" style="border-bottom: 1px solid #999;">
+				<h3 style="margin-bottom: 5px;">MY IDEAL MENTOR</h3>
 			</div>
 		</div>
+		<br>
+		<div class="row">
+			<div class="large-12 columns">
+				<p><?php echo $model->learn_expertise_description; ?></p>
+			</div>
+		</div>
+	</div>
+</div>
+<br><Br>
+<div class="row">
+	<div class="large-4 large-centered columns">
+		<a href="/tacit/app" class="teal large button">RETURN TO MENTORS</a>
 	</div>
 </div>
 

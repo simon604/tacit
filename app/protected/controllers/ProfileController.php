@@ -104,7 +104,6 @@ class ProfileController extends Controller
 			}
 		}
 
-		$this->layout = "//layouts/simple";
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -130,7 +129,6 @@ class ProfileController extends Controller
 				$this->redirect(array('view','id'=>$model->user_id));
 		}
 
-		$this->layout = "//layouts/simple";
 		$this->render('update',array(
 			'model'=>$model,
 		));

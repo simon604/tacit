@@ -1,15 +1,16 @@
-<div class="row">
-	<div class="large-12 columns text-center">
-		<h1>Congrats! Let's create your profile!</h1>
-	</div>
-</div>
-
-<div class="row">
-	<div class="large-8 large-centered columns">
+<div class="row" style="margin-top:35px;">
+	<div class="large-10 large-centered columns">
 		<div class="panel">
-			<h3>Tell us a little about you:</h3>
+			<div class="row">
+				<div class="large-11 large-centered columns" style="border-bottom: 1px solid black;">
+					<h2>Tell us more about yourself:</h2>
+				</div>
 			<div>
-				<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+
+			<div class="row" style="margin-top:20px;">
+				<div class="large-11 large-centered columns">
+					<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+				</div>
 			<div>
 		</div>
 	</div>

@@ -4,7 +4,7 @@ class SiteController extends Controller
 {
 	public function init()
 	{
-		$this->layout = "//layouts/no-nav";
+		
 	}
 	/**
 	 * Declares class-based actions.
@@ -104,7 +104,6 @@ class SiteController extends Controller
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
-		$this->layout = "//layouts/simple";
 		$this->render('login',array('model'=>$model));
 	}
 
