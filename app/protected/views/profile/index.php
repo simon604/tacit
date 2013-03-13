@@ -3,19 +3,22 @@
 	<div id="profile-list" class="row" style="margin-bottom: 40px; ">
 		<div class="large-9 large-centered columns" style="padding-bottom: 20px; border-bottom: 1px solid #999;">
 			<div class="row">
-				<div class="small-5 columns">
+				<div class="small-4 columns">
 					<a href="?r=profile/view&id=<?php echo $profile->user_id; ?>"><img width="200" src="<?php echo Yii::app()->request->baseUrl . '/images/' . $profile->image_path; ?>"></a>
+					<div style="text-align:center;width:200px; padding-top:5px;padding-bottom:5px;background:#99CCCC; color:#000;">
+			            <span class="brandon bold"><?php echo strtoupper($profile->firstname); ?></span>
+				    </div>
 				</div>
-				<div class="small-7 columns">
+				<div class="small-8 columns">
 					<div class="row">
 						<div class="small-12 columns">
-							<a href="?r=profile/view&id=<?php echo $profile->user_id; ?>"><h2 style="margin-bottom: 0px; margin-top: 0;"><?php echo strtoupper($profile->share_expertise); ?></h2></a>
+							<a href="?r=profile/view&id=<?php echo $profile->user_id; ?>"><h2 style="margin-bottom: 0px; margin-top: 0;font-size: 32px; color:#333;" class="brandon bold" ><?php echo strtoupper($profile->share_expertise); ?></h2></a>
 						</div>
 					</div>
 					<div class="row" style="margin-top:10px;">
 						<div class="small-4 columns">
 							<p class="profile-label">
-								<span class="profile-view-label">Experience:</span> <?php echo $profile->experience; ?>
+								<span class="profile-view-label">Experience:</span> <?php echo $profile->experience; ?> Years
 							</p>
 						</div>
 						<div class="small-8 columns">

@@ -66,7 +66,7 @@
 	</div>
 
 	<br><br>
-	<div class="input-row buttons">
+	<div class="input-row buttons text-center">
 		<?php echo CHtml::submitButton('DONE', array('class' => 'dark-orange large button')); ?>
 	</div>
 

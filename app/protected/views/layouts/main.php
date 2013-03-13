@@ -14,6 +14,9 @@
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/foundation.css" />
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 
+	<script type="text/javascript" src="//use.typekit.net/uvv8pxg.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/vendor/custom.modernizr.js"></script>
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -21,12 +24,12 @@
 
 <body id="<?php echo $this->getUniqueId(); ?>" class="<?php echo $this->action->id; ?>">
 	<div class="container">
-		<div id="header">
+		<div id="header" style="z-index:999">
 			<nav class="top-bar">
 				<!-- Title Area -->
 				<ul class="title-area">
 					<li class="name">
-						<h1><a href="/tacit/app">TACIT.ORG</a></h1>
+						<a href="/tacit/app"><img style="padding-top: 11px;margin-right:12px;" src="<?php echo Yii::app()->request->baseUrl . '/images/tacitlogo.png'; ?>"></a>
 					</li>
 
 					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -35,15 +38,15 @@
 
 				<section class="top-bar-section">
 					<ul class="left">
-						<li><a href="?r=profile">FIND MENTORS</a></li>
+						<li><a href="?r=profile" class="brandon bold" style="font-size: 15px;">FIND MENTORS</a></li>
 					</ul>
 
 					<ul class="right">
 						<?php if(Yii::app()->user->isGuest) { ?>
-						<li><a href="?r=site/login" class="teal button">LOGIN</a>
+						<li><a href="?r=site/login" class="brandon bold" style="font-size: 15px;">LOGIN</a>
 						<?php } else { ?>
-						<li><a href="?r=profile/view&id=<?php echo Yii::app()->user->id; ?>">MY PROFILE</a>
-						<li><a href="?r=site/logout">LOGOUT</a>
+						<li><a class="brandon bold" href="?r=profile/view&id=<?php echo Yii::app()->user->id; ?>" style="font-size: 15px;">MY PROFILE</a>
+						<li><a href="?r=site/logout" class="brandon bold" style="font-size: 15px;">LOGOUT</a>
 						<?php } ?>	
 					</li>
 				</section>

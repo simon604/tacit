@@ -3,20 +3,46 @@ body
 	margin: 0;
 	padding: 0;
 	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	font-family: "jubilat",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	background: #F7F7EC;
 }
 
 body#user {
-	background-color: yellow;
+	background-color: #f5c21b;
 }
 
 body#profile {
-	background-color: yellow;
+	background-color: #f5c21b;
 }
 
-body#profile.view {
-	background-color: white;
+body#profile.view, body#profile.index {
+	background-color: #F7F7EC;
+}
+
+.brandon.regular {
+	font-family: "brandon-grotesque",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.brandon.bold {
+	font-family: "brandon-grotesque",sans-serif;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.jubilat.regular {
+	font-family: "jubilat",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.jubilat.bold {
+	font-family: "jubilat",sans-serif;
+	font-style: normal;
+	font-weight: bold;
 }
 
 #profile-form #Profile_role label {
@@ -54,7 +80,8 @@ body#profile.view {
 }
 
 .button.teal {
-	background-color: #9ad7d0;
+	background-color: #99cccc;
+	color: #333;
 }
 
 .button:hover, .button:focus {
@@ -85,7 +112,8 @@ form input {
 }
 
 #profile-form label {
-	font-size: 20px;
+	font-size: 24px;
+	font-weight: normal;
 }
 
 #profile-form textarea {
@@ -110,11 +138,19 @@ form input {
 
 #profile-list .profile-label {
 	margin-bottom: 0px;
-	font-size: 14px;
-	font-weight: bold;
+	font-size: 14px;	
+	font-weight: normal;
 }
 
 #profile-list .profile-label span {
 	font-weight: normal;
 	font-size: 14px;
 }
+
+#login-form label {
+	font-size: 18px;
+}
+
+#bg { position: fixed; top: 0; left: 0; z-index: -1;}
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }

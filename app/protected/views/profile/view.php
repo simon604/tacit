@@ -2,15 +2,13 @@
 	<div class="large-10 large-centered columns">
 		<div class="small-4 columns">
 			<img style="border: 1px solid #EEE;" width="200" src="<?php echo Yii::app()->request->baseUrl . '/images/' . $model->image_path; ?>">
-			<div style="position: absolute; left: 50%; margin-top: 5px;">
-		        <div style="position: relative; left: -50%; font-size:16px;">
-		            <?php echo $model->firstname; ?>
-		        </div>
+			<div style="text-align:center;width:200px; padding-top:5px;padding-bottom:5px;background:#99CCCC; color:#000;">
+	            <span class="brandon bold"><?php echo strtoupper($model->firstname); ?></span>
 		    </div>
 		</div>
-		<div class="small-6 columns" style="margin-left: 20px;">
+		<div class="small-7 columns" style="margin-left: 20px;">
 			<div class="row" style="border-bottom: 1px solid #999;">
-				<h1 style="margin-bottom: 5px; margin-top: 0;"><?php echo strtoupper($model->share_expertise); ?></h1>
+				<h1 style="margin-bottom: 5px; margin-top: 0; font-size: 42px; font-color: #333;" class="brandon bold"><?php echo strtoupper($model->share_expertise); ?></h1>
 			</div>
 			<div class="row" style="margin-top:10px;">
 				<p class="profile-label">
@@ -24,7 +22,7 @@
 			</div>
 			<div class="row">
 				<p class="profile-label">
-					<span class="profile-view-label">Experience:</span> <?php echo $model->experience; ?>
+					<span class="profile-view-label">Experience:</span> <?php echo $model->experience; ?> Years
 				</p>
 			</div>
 
@@ -34,7 +32,7 @@
 			</div>
 			<br>
 			<div class="row">
-				<a href="#" data-reveal-id="myModal" class="dark-orange button left">CONTACT</a>
+				<a href="#" data-reveal-id="myModal" class="dark-orange small button left brandon bold">CONTACT</a>
 			</div>
 		</div>
 		<div class="small-2 columns"></div>
@@ -45,13 +43,13 @@
 	<div class="large-10 large-centered columns">
 		<div class="row">
 			<div class="large-12 columns" style="border-bottom: 1px solid #999;">
-				<h3 style="margin-bottom: 5px;">MY STORY</h3>
+				<h3 style="margin-bottom: 5px; font-size: 24px;" class="brandon bold">MY STORY</h3>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="large-12 columns">
-				<p><?php echo $model->share_expertise_description; ?></p>
+				<p class="jubilat regular" style="font-size: 18px; color: #666;"><?php echo $model->share_expertise_description; ?></p>
 			</div>
 		</div>
 	</div>
@@ -61,13 +59,13 @@
 	<div class="large-10 large-centered columns">
 		<div class="row">
 			<div class="large-12 columns" style="border-bottom: 1px solid #999;">
-				<h3 style="margin-bottom: 5px;">MY IDEAL MENTOR</h3>
+				<h3 style="margin-bottom: 5px; font-size: 24px;" class="brandon bold">MY IDEAL MENTOR</h3>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="large-12 columns">
-				<p><?php echo $model->learn_expertise_description; ?></p>
+				<p class="jubilat regular" style="font-size: 18px; color: #666;"><?php echo $model->learn_expertise_description; ?></p>
 			</div>
 		</div>
 	</div>
@@ -75,7 +73,7 @@
 <br><Br>
 <div class="row">
 	<div class="large-4 large-centered columns">
-		<a href="/tacit/app" class="teal large button">RETURN TO MENTORS</a>
+		<a href="/tacit/app" class="teal large button brandon bold">RETURN TO MENTORS</a>
 	</div>
 </div>
 

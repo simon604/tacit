@@ -16,7 +16,7 @@
 			<!-- <?php echo $form->label($model,'username', array('class' => 'right inline')); ?> -->
 	    <!-- </div> -->
 	    <div class="small-12 columns">
-	    	<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>128, 'placeholder' => 'Username')); ?>
+	    	<?php echo $form->textField($model,'username',array('class' => 'jubilat regular','size'=>60,'maxlength'=>128, 'placeholder' => 'Username')); ?>
 	    </div>
 	</div>
 
@@ -25,7 +25,7 @@
 			<!-- <?php echo $form->label($model,'email', array('class' => 'right inline')); ?> -->
 	    <!-- </div> -->
 	    <div class="small-12 columns">
-	    	<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128, 'placeholder' => 'Email')); ?>
+	    	<?php echo $form->textField($model,'email',array('class' => 'jubilat regular','size'=>60,'maxlength'=>128, 'placeholder' => 'Your Email')); ?>
 	    </div>
 	</div>
 
@@ -34,14 +34,14 @@
 			<!-- <?php echo $form->label($model,'password', array('class' => 'right inline')); ?> -->
 	    <!-- </div> -->
 	    <div class="small-12 columns">
-	    	<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>128, 'placeholder' => 'Password')); ?>
+	    	<?php echo $form->passwordField($model,'password',array('class' => 'jubilat regular','size'=>60,'maxlength'=>128, 'placeholder' => 'Choose a Password')); ?>
 	    </div>
 	</div>
 
 	
 	<br>
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'CREATE ACCOUNT!' : 'Save', array('class' => 'dark-orange large button expand')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'CREATE ACCOUNT!' : 'Save', array('class' => 'dark-orange large button expand brandon bold')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

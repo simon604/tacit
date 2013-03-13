@@ -40,7 +40,7 @@
 	</div>
 <br>
 	<div class="row buttons">
-		<div class="large-12 columns">
+		<div class="large-12 columns text-center">
 			<?php echo CHtml::submitButton('CONTINUE', array('class' => 'dark-orange large button')); ?>
 		</div>
 	</div>
