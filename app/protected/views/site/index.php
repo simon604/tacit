@@ -7,7 +7,7 @@
 			</div>
 			<div class="row">
 				<div class="small-12 small-centered columns text-center">
-					<p style="margin-top:20px;font-size:18px;" class="brandon regular"><b>TACIT EXCHANGE</b> IS AN INTERNATIONAL MENTORSHIP COMMUNITY<br> THAT BRINGS <b>ARTISTS & MAKERS </b> TOGETHER<br> TO SHARE THEIR CREATIVE PASSIONS.</p>
+					<p style="margin-top:20px;font-size:18px;" class="brandon regular"><b>TACIT EXCHANGE</b> IS AN INTERGENERATIONAL MENTORSHIP COMMUNITY<br> THAT BRINGS <b>ARTISTS & MAKERS </b> TOGETHER<br> TO SHARE THEIR CREATIVE PASSIONS.</p>
 				</div>
 			</div>
 		</div>
