@@ -29,7 +29,7 @@
 				<!-- Title Area -->
 				<ul class="title-area">
 					<li class="name">
-						<a href="/tacit/app"><img style="padding-top: 11px;margin-right:12px;" src="<?php echo Yii::app()->request->baseUrl . '/images/tacitlogo.png'; ?>"></a>
+						<a href="/"><img style="padding-top: 11px;margin-right:12px;" src="<?php echo Yii::app()->request->baseUrl . '/images/tacitlogo.png'; ?>"></a>
 					</li>
 
 					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->

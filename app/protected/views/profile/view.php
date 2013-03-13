@@ -73,7 +73,7 @@
 <br><Br>
 <div class="row">
 	<div class="large-4 large-centered columns">
-		<a href="/tacit/app" class="teal large button brandon bold">RETURN TO MENTORS</a>
+		<a href="/" class="teal large button brandon bold">RETURN TO MENTORS</a>
 	</div>
 </div>
 
